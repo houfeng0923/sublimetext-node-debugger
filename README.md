@@ -12,8 +12,10 @@ a  simple plugin for sublime text2 to debug node file  in  WebKit based browser.
 
 ### Install 
 
-1. install node-inspector (global mode) with [npm](http://github.com/isaacs/npm)
+1. install node-inspector (global mode) with npm
+
         $ npm install -g node-inspector
+        
 ps: if you have trouble with  node-inspector when installing in  windowxp or window7, you can find answer in this link:
 http://stackoverflow.com/questions/11695739/installing-node-inspector-on-windows
 
