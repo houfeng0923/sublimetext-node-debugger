@@ -1,38 +1,35 @@
-a  simple plugin for sublime text2 to debug node file  in  WebKit based browser
+a  simple plugin for sublime text2 to debug node file  in  WebKit based browser.(os:window)
 
 ## Getting Started
 
 
 ### Requirements
 
-* [nodeJS](http://github.com/ry/node)
-  - versions: 0.6.0 or later
+* [nodeJS](http://github.com/ry/node) version >0.6.0 
 * [npm](http://github.com/isaacs/npm)
-* [node-inspector]
+* [node-inspector](https://github.com/dannycoates/node-inspector)
 * A WebKit based browser: Chrome, Safari, etc.
 
-### Install
+### Install 
 
-* With [npm](http://github.com/isaacs/npm)
+1. install node-inspector (global mode) with [npm](http://github.com/isaacs/npm)
         $ npm install -g node-inspector
-ps: node-inspector 
+ps: if you have trouble with  node-inspector when installing in  windowxp or window7, you can find answer in this link:
 http://stackoverflow.com/questions/11695739/installing-node-inspector-on-windows
+
+2. download this plugin and unzip it . open the packages folder  by  clicking  the Preferences > Browser packages... entry in your sublime text2. then copy unziped folder in this folder. 
+
+3. open  the  'nodejs_debug.sublime-settings'  file in plugin folder and set the parameter 'chrome_path' using your browser path!
+
 ### Debugging
 
-1. start the inspector. I usually put it in the background
+1. open a node.js file 
 
-		$ node-inspector &
+2. press ctrl+alt+b or click  item 'Nodejs Debug' on  contextmenu 
 
-2. open http://127.0.0.1:8080/debug?port=5858 in your favorite WebKit based browser
+then you can debug your code in browser .
 
-3. you should now see the javascript source from node. If you don't, click the scripts tab.
 
-4. select a script and set some breakpoints (far left line numbers)
 
-5. then watch the [screencasts](http://www.youtube.com/view_play_list?p=A5216AC29A41EFA8)
 
-For more information on getting started see the [wiki](http://github.com/dannycoates/node-inspector/wiki/Getting-Started---from-scratch)
-
-node-inspector works almost exactly like the web inspector in Safari and
-Chrome. Here's a good [overview](http://code.google.com/chrome/devtools/docs/scripts.html) of the UI
   
