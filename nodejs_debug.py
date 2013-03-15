@@ -21,14 +21,14 @@ class NodejsDebugCommand(sublime_plugin.TextCommand):
     cmd = "cmd.exe /K node --debug-brk " + regx.sub("\ ", self.view.file_name());
     p = Popen(cmd) 
      
-    p2 = Popen("node-inspector.cmd")
+    p2 = Popen("node-inspector.cmd --web-port=9901")
 
     sublime.set_timeout(self.openChrome,300)
   
 
   def openChrome(self):
-   		
-    url = "localhost:8080/debug?port=5858"
+      
+    url = "localhost:9901/debug?port=5858"
 
     config = sublime.load_settings(SETTINGS_FILE)
     chrome_path = config.get('chrome_path',"") 
