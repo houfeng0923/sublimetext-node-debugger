@@ -25,13 +25,13 @@ class NodejsDebugCommand(sublime_plugin.TextCommand):
     window.run_command('save')
 
     regx = re.compile(" ")
-    terminal = TerminalSelector.get()
 
     if sublime.platform() == "windows":
-        cmd = terminal + " /K node --debug-brk " + regx.sub("\ ", self.view.file_name());
-        p = os.popen(cmd)
-        p2 = os.popen("node-inspector.cmd --web-port=9901")
+        cmd = "cmd /K node --debug-brk " + regx.sub("\ ", self.view.file_name());
+        p = Popen(cmd)
+        p2 = Popen("node-inspector.cmd --web-port=9901")
     if sublime.platform() == "linux":
+        terminal = TerminalSelector.get()
         cmd = terminal + " -e 'node --debug-brk " + regx.sub("\ ", self.view.file_name()+ "'");
         p = os.popen(cmd)
         p2 = os.popen(terminal + " -e 'node-inspector --web-port=9901'")
@@ -87,6 +87,7 @@ class TerminalSelector():
                 key_string = 'Console\\%SystemRoot%_system32_' + \
                     'WindowsPowerShell_v1.0_powershell.exe'
                 try:
+                    sublime.message_dialog(key_string)
                     key = _winreg.OpenKey(_winreg.HKEY_CURRENT_USER,
                         key_string)
                 except (WindowsError):
@@ -106,7 +107,6 @@ class TerminalSelector():
                 os.putenv('sublime_terminal_path', sublime_terminal_path.replace(' ', '` '))
             else :
                 default = os.environ['SYSTEMROOT'] + '\\System32\\cmd.exe'
-
         elif sys.platform == 'darwin':
             default = os.path.join(package_dir, 'Terminal.sh')
             if not os.access(default, os.X_OK):
