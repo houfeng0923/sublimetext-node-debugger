@@ -1,3 +1,6 @@
-{ 
-	"chrome_path":"E:\\Users\\houfeng-win7\\AppData\\Local\\360Chrome\\Chrome\\Application\\360Chrome.exe"
+{
+	//"chrome_path" : "google-chrome",
+	"chrome_path":"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
+	//"terminal"    : "cmd.exe" // default is "cmd.exe" for windows
+
 }
