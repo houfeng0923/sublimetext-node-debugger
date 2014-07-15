@@ -35,7 +35,7 @@ class NodejsDebugCommand(sublime_plugin.TextCommand):
         subprocess.Popen(cmd, startupinfo=startupinfo1)
 
         startupinfo2 = subprocess.STARTUPINFO()
-        startupinfo2.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+        # startupinfo2.dwFlags |= subprocess.STARTF_USESHOWWINDOW
         subprocess.Popen("node-inspector.cmd --web-port=9901", startupinfo=startupinfo2)
         
     if sublime.platform() == "linux":
