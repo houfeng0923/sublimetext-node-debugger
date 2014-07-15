@@ -28,8 +28,16 @@ class NodejsDebugCommand(sublime_plugin.TextCommand):
 
     if sublime.platform() == "windows":
         cmd = "cmd /K node --debug-brk " + regx.sub("\ ", self.view.file_name());
-        p = Popen(cmd)
-        p2 = Popen("node-inspector.cmd --web-port=9901")
+        # p = Popen(cmd)
+        # p2 = Popen("node-inspector.cmd --web-port=9901")
+        startupinfo1 = subprocess.STARTUPINFO()
+        startupinfo1.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+        subprocess.Popen(cmd, startupinfo=startupinfo1)
+
+        startupinfo2 = subprocess.STARTUPINFO()
+        startupinfo2.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+        subprocess.Popen("node-inspector.cmd --web-port=9901", startupinfo=startupinfo2)
+        
     if sublime.platform() == "linux":
         terminal = TerminalSelector.get()
         cmd = terminal + " -e 'node --debug-brk " + regx.sub("\ ", self.view.file_name()+ "'");
