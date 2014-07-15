@@ -1,4 +1,4 @@
-a  simple plugin for sublime text2 to debug node file  in  WebKit based browser.
+a  simple plugin for sublime text2 to debug node file  in  WebKit based browser.(Similar to `node-debug`)
 
 ## Getting Started
 
