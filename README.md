@@ -26,7 +26,7 @@ a  simple plugin for sublime text2/3 to debug node file  in  WebKit based browse
 
 ### Debugging
 
-1. open a node.js file in sublime text 2
+1. open a node.js file in sublime text 
 
 2. press ctrl+alt+b or click  item 'Nodejs Debug' on  contextmenu
 
