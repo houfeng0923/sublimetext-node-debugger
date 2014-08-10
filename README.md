@@ -8,8 +8,9 @@ a  simple plugin for sublime text2/3 to debug node file  in  WebKit based browse
 * [nodeJS](http://github.com/ry/node) version >0.6.0
 * [npm](http://github.com/isaacs/npm)
 * [node-inspector](https://github.com/dannycoates/node-inspector)
-* A WebKit based browser: Chrome, Safari, etc.
-* Your operating system must be Windows or Linux.
+* A WebKit based browser: Chrome, Safari, etc. (make sure it's default browser!)
+
+[](* Your operating system must be Windows or Linux.)
 
 ### Install
 
@@ -22,11 +23,13 @@ a  simple plugin for sublime text2/3 to debug node file  in  WebKit based browse
 
 2. download this plugin and unzip it . open the packages folder  by  clicking  the Preferences > Browser packages... entry in your sublime text2. then copy unziped folder in this folder.
 
+[](
 3. open  the  'nodejs_debug.sublime-settings'  file in plugin folder and set the parameter 'chrome_path' using your browser path!
+)
 
 ### Debugging
 
-1. open a node.js file in sublime text 
+1. open a node.js file in sublime text
 
 2. press ctrl+alt+b or click  item 'Nodejs Debug' on  contextmenu
 
