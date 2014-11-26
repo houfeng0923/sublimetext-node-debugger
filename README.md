@@ -5,12 +5,11 @@ a  simple plugin for sublime text2/3 to debug node file  in  WebKit based browse
 
 ### Requirements
 
-* [nodeJS](http://github.com/ry/node) version >0.6.0
+* [node.js](http://nodejs.org)
 * [npm](http://github.com/isaacs/npm)
 * [node-inspector](https://github.com/dannycoates/node-inspector)
 * A WebKit based browser: Chrome, Safari, etc. (make sure it's default browser!)
 
-[](* Your operating system must be Windows or Linux.)
 
 ### Install
 

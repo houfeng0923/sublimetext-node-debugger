@@ -40,5 +40,5 @@ class NodejsDebugCommand(sublime_plugin.TextCommand):
     if sublime.platform() == "windows":
         cmd += ".cmd";
 
-    subprocess.Popen([cmd,'--web-port=9901',regx.sub("\ ",self.view.file_name())],
+    subprocess.Popen([cmd,'--nodejs','--harmony','--web-port=9901',regx.sub("\ ",self.view.file_name())],
             startupinfo=_get_startupinfo())
