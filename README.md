@@ -20,10 +20,7 @@ a  simple plugin for sublime text2/3 to debug node file  in  WebKit based browse
    ps: if you have trouble with  node-inspector when installing in  windowxp or window7, you can find answer in this link: [Installing node-inspector on Windows](http://stackoverflow.com/questions/11695739/installing-node-inspector-on-windows) or update npm version .
 
 2. download and unzip it (rename to 'Nodejs Debug'). open the packages folder  by  clicking  the Preferences > Browser packages... entry in your sublime text. then copy unziped folder in this folder.
-
-[](
-3. open  the  'nodejs_debug.sublime-settings'  file in plugin folder and set the parameter 'chrome_path' using your browser path!
-)
+ 
 
 ### Debugging
 
